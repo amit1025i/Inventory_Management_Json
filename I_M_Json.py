@@ -28,7 +28,7 @@ if record[uId]["Quantity"] >= uQn:
     fd=open("product_Records.json","w")
     fd.write(js)
     fd.close()
-    sale=uName+","+uEmail+","+uPhone+","+uId+","+record[uId]["Product_Name"]+","+str(uQn)+","+str(record[uId]["Price"]*uQn)+","+str(time.ctime())+"\n"
+    sale=uName+", "+uEmail+", "+uPhone+", "+uId+", "+record[uId]["Product_Name"]+", "+str(uQn)+", "+str(record[uId]["Price"]*uQn)+", "+str(time.ctime())+"\n"
     td=open("sales.txt","a")
     td.write(sale)
     td.close()
@@ -49,7 +49,7 @@ else:
              fd=open("product_Records.json","w")
              fd.write(js)
              fd.close()
-             sale=uName+","+uEmail+","+uPhone+","+uId+","+record[uId]["Product_Name"]+","+str(record[uId]["Qn"])+","+str(record[uId]["Price"]*record[uId]["Qn"])+","+str(time.ctime())+"\n"
+             sale=uName+", "+uEmail+", "+uPhone+", "+uId+", "+record[uId]["Product_Name"]+", "+str(record[uId]["Quantity"])+", "+str(record[uId]["Price"]*record[uId]["Quantity"])+", "+str(time.ctime())+"\n"
              td=open("sales.txt","a")
              td.write(sale)
              td.close()
