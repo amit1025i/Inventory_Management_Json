@@ -43,29 +43,6 @@ This project implements a basic billing and inventory management system using Py
 - The purchase record is saved in the sales.txt file with the details of the transaction.
 - The updated inventory is written back to the product_Records.json file.
 
-
-
-## Expected Output :
-
---------------- Menu ---------------
-1001 : Product A | 100 | 50
-1002 : Product B | 200 | 30
------------------------------------
-
-Enter The Name      : Amit Kumar
-Enter The Email   : amit.doe@example.com
-Enter The Phone   : 1234567890
-Enter The Product Id : 101
-Enter Quantity       : 2
-
---------------- Bill ---------------
-Product Name   :  Product A
-Price          :  100
-Quantity       :  2
------------------------------------
-Billing Amount :  200
------------------------------------
-
 ## Future Enhancements :
 
 - Add Validation :Improve input validation for user details and product selection.
