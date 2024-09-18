@@ -28,6 +28,46 @@ This project implements a basic billing and inventory management system using Py
       },
       ...
   }
-# Customer Details Saving In This format :
 
-<user_name>, <user_email>, <user_phone>, <product_id>, <product_name>, <quantity>, <total_price>, <timestamp>
+ - `sales.txt`: Stores customer details in the following format:
+
+<user_name>, <user_email>, <user_phone>, <product_id>, <product_name>, <quantity>, <total_price>,<timestamp>
+
+## How it works :
+
+- The program reads the product_Records.json file to fetch the current inventory.
+- It then displays the list of available products and prompts the user to input their details and purchase information.
+- After checking if the requested quantity is available :
+  - If enough stock exists, the product's quantity is reduced by the purchased amount, and a bill is generated.
+  - If the stock is insufficient, the user is prompted to either buy the available quantity or cancel the purchase.
+- The purchase record is saved in the sales.txt file with the details of the transaction.
+- The updated inventory is written back to the product_Records.json file.
+
+
+
+## Expected Output :
+
+--------------- Menu ---------------
+1001 : Product A | 100 | 50
+1002 : Product B | 200 | 30
+-----------------------------------
+
+Enter The Name      : Amit Kumar
+Enter The Email   : amit.doe@example.com
+Enter The Phone   : 1234567890
+Enter The Product Id : 101
+Enter Quantity       : 2
+
+--------------- Bill ---------------
+Product Name   :  Product A
+Price          :  100
+Quantity       :  2
+-----------------------------------
+Billing Amount :  200
+-----------------------------------
+
+## Future Enhancements :
+
+- Add Validation :Improve input validation for user details and product selection.
+- Graphical Interface:Implement a GUI using libraries like Tkinter for better user experience.
+- Database Support:Switch from a JSON-based system to a proper database like SQLite or MySQL for better scalability.
